@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Forkel Grids
+ *
+ * @category    Forkel
+ * @package     Forkel_Grids
+ * @copyright   Copyright (c) 2015 Tobias Forkel (http://www.tobiasforkel.de)
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+ -->
+
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <forkel translate="title" module="forkel_grids">
+                        <children>
+                            <grids>
+                                <title>Grids</title>
+                                <sort_order>10</sort_order>
+                                <children>
+                                    <basic>
+                                        <title>Forkel</title>
+                                        <sort_order>10</sort_order>
+                                    </basic>
+                                </children>
+                            </grids>
+                        </children>
+                    </forkel>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <forkel translate="title" module="forkel_grids">
+            <title>Forkel</title>
+            <sort_order>300</sort_order>
+            <children>
+                <grids>
+                    <title>Grids</title>
+                    <sort_order>10</sort_order>
+                    <children>
+                        <basic>
+                            <title>Basic</title>
+                            <sort_order>10</sort_order>
+                            <action>adminhtml/forkel_grids_basic/index</action>
+                        </basic>
+                        <renderer>
+                            <title>Renderer</title>
+                            <sort_order>20</sort_order>
+                            <action>adminhtml/forkel_grids_renderer/index</action>
+                        </renderer>
+                    </children>
+                </grids>
+            </children>
+        </forkel>
+    </menu>
+</config>

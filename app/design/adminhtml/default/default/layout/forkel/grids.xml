@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_forkel_grids_basic_index>
+        <reference name="content">
+            <block type="forkel_grids/adminhtml_basic" name="forkel_grids_basic" />
+        </reference>
+    </adminhtml_forkel_grids_basic_index>
+    <adminhtml_forkel_grids_renderer_index>
+        <reference name="content">
+            <block type="forkel_grids/adminhtml_renderer" name="forkel_grids_renderer" />
+        </reference>
+    </adminhtml_forkel_grids_renderer_index>
+</layout>

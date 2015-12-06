@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Forkel Grids
+ *
+ * @category    Forkel
+ * @package     Forkel_Grids
+ * @copyright   Copyright (c) 2015 Tobias Forkel (http://www.tobiasforkel.de)
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+ -->
+
+<config>
+    <modules>
+        <Forkel_Grids>
+            <version>0.0.1</version>
+        </Forkel_Grids>
+    </modules>
+    <global>
+
+        <blocks>
+            <forkel_grids>
+                <class>Forkel_Grids_Block</class>
+            </forkel_grids>
+        </blocks>
+
+        <helpers>
+            <forkel_grids>
+                <class>Forkel_Grids_Helper</class>
+            </forkel_grids>
+        </helpers>
+
+        <models>
+            <forkel_grids>
+                <class>Forkel_Grids_Model</class>
+                <resourceModel>forkel_grids_resource</resourceModel>
+            </forkel_grids>
+            <forkel_grids_resource>
+                <class>Forkel_Grids_Model_Resource</class>
+                <entities>
+                    <demo>
+                        <table>forkel_grids_demo</table>
+                    </demo>
+                </entities>
+            </forkel_grids_resource>
+        </models>
+
+        <resources>
+            <forkel_grids_setup>
+                <setup>
+                    <module>Forkel_Grids</module>
+                </setup>
+            </forkel_grids_setup>
+        </resources>
+
+    </global>
+    <admin>
+
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Forkel_Grids after="Mage_Adminhtml">Forkel_Grids_Adminhtml</Forkel_Grids>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+
+    </admin>
+    <adminhtml>
+
+        <layout>
+            <updates>
+                <forkel_grids>
+                    <file>forkel/grids.xml</file>
+                </forkel_grids>
+            </updates>
+        </layout>
+
+    </adminhtml>
+</config>
