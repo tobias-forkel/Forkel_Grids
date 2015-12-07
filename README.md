@@ -9,6 +9,10 @@ Forkel Grids is a collection of different adminhtml grids and tested code you ca
 3. After installation you should see a new menu item " Forkel " in the admin panel.
 4. You should find a record " forkel_grids_setup " in table " core_resource ". Use `select * from core_resource where code = 'forkel_grids_setup';`
 
+## Features
+* Basic Grid
+* Grid with Renderer and custom help block
+
 ## Usage
 The functionality can be used in the backend section `Forkel > Grids`.
 
@@ -28,6 +32,7 @@ If you have any issues with this extension, open an issue on [Github](https://gi
 * Initial version of this module
 * Added a basic grid
 * Added a basic grid with a simple renderer
+* Added help block to renderer grid
 
 ## License
 [OSL - Open Software Licence 3.0](http://opensource.org/licenses/osl-3.0.php)
