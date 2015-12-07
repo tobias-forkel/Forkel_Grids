@@ -48,7 +48,7 @@
                             <action>adminhtml/forkel_grids_basic/index</action>
                         </basic>
                         <renderer>
-                            <title>Renderer</title>
+                            <title>Renderer + Help Block</title>
                             <sort_order>20</sort_order>
                             <action>adminhtml/forkel_grids_renderer/index</action>
                         </renderer>

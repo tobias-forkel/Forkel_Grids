@@ -14,7 +14,7 @@ class Forkel_Grids_Block_Adminhtml_Renderer extends Mage_Adminhtml_Block_Widget_
     {
         $this->_blockGroup = Forkel_Grids_Helper_Data::MODULE_KEY;
         $this->_controller = 'adminhtml_renderer';
-        $this->_headerText = $this->__('Forkel Grids > Renderer');
+        $this->_headerText = $this->__('Forkel Grids > Renderer + Help Block');
 
         parent::__construct();
     }

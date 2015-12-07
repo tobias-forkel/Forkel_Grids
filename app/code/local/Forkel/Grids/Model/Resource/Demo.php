@@ -8,7 +8,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
-class Forkel_Grids_Model_Resource_Demo extends Mage_Core_Model_Mysql4_Abstract
+class Forkel_Grids_Model_Resource_Demo extends Mage_Core_Model_Resource_Db_Abstract
 {
     protected function _construct()
     {

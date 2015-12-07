@@ -11,4 +11,4 @@
 
 * Initial version of this module
 * Added a basic grid
-* Added a basic grid with renderer
+* Added a basic grid with a simple renderer
