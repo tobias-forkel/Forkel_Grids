@@ -1,5 +1,5 @@
 # Forkel Grids
-Forkel Grids is a collection of different adminhtml grids and tested code you can use for your project.
+A collection of different adminhtml grids and tested code you can use for your project.
 
 ![Forkel Grids - Preview](https://raw.githubusercontent.com/tobias-forkel/Forkel_Grids/master/preview.gif)
 
@@ -10,6 +10,7 @@ Forkel Grids is a collection of different adminhtml grids and tested code you ca
 4. You should find a record " forkel_grids_setup " in table " core_resource ". Use `select * from core_resource where code = 'forkel_grids_setup';`
 
 ## Features
+* A custom dashboard with grids
 * A basic grid
 * A basic readonly grid
 * Grid with Renderer and custom help block
@@ -28,6 +29,9 @@ If you have any issues with this extension, open an issue on [Github](https://gi
 5. Submit a pull request. :)
 
 ## History
+===== 0.0.3 =====
+* Added a custom dashboard with grids as a child block
+
 ===== 0.0.2 =====
 * Added a basic read only grid
 
