@@ -5,6 +5,11 @@
             <block type="forkel_grids/adminhtml_basic" name="forkel_grids_basic" />
         </reference>
     </adminhtml_forkel_grids_basic_index>
+    <adminhtml_forkel_grids_readonly_index>
+        <reference name="content">
+            <block type="forkel_grids/adminhtml_readonly" name="forkel_grids_readonly" />
+        </reference>
+    </adminhtml_forkel_grids_readonly_index>
     <adminhtml_forkel_grids_renderer_index>
         <reference name="content">
             <block type="forkel_grids/help" name="forkel_grids_help" template="forkel/grids/help.phtml" />

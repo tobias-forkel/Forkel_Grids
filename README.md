@@ -10,7 +10,8 @@ Forkel Grids is a collection of different adminhtml grids and tested code you ca
 4. You should find a record " forkel_grids_setup " in table " core_resource ". Use `select * from core_resource where code = 'forkel_grids_setup';`
 
 ## Features
-* Basic Grid
+* A basic grid
+* A basic readonly grid
 * Grid with Renderer and custom help block
 
 ## Usage
@@ -27,8 +28,10 @@ If you have any issues with this extension, open an issue on [Github](https://gi
 5. Submit a pull request. :)
 
 ## History
-===== 0.0.1 =====
+===== 0.0.2 =====
+* Added a basic read only grid
 
+===== 0.0.1 =====
 * Initial version of this module
 * Added a basic grid
 * Added a basic grid with a simple renderer
