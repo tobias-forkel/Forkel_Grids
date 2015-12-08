@@ -42,19 +42,24 @@
                     <title>Grids</title>
                     <sort_order>10</sort_order>
                     <children>
+                        <dashboard>
+                            <title>Dashboard</title>
+                            <sort_order>100</sort_order>
+                            <action>adminhtml/forkel_grids_dashboard/index</action>
+                        </dashboard>
                         <basic>
                             <title>Basic</title>
-                            <sort_order>10</sort_order>
+                            <sort_order>200</sort_order>
                             <action>adminhtml/forkel_grids_basic/index</action>
                         </basic>
                         <readonly>
                             <title>Readonly</title>
-                            <sort_order>20</sort_order>
+                            <sort_order>210</sort_order>
                             <action>adminhtml/forkel_grids_readonly/index</action>
                         </readonly>
                         <renderer>
                             <title>Renderer + Help Block</title>
-                            <sort_order>30</sort_order>
+                            <sort_order>300</sort_order>
                             <action>adminhtml/forkel_grids_renderer/index</action>
                         </renderer>
                     </children>

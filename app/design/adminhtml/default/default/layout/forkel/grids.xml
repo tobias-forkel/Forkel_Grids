@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <layout>
+    <adminhtml_forkel_grids_dashboard_index>
+        <reference name="content">
+            <block type="forkel_grids/adminhtml_dashboard" name="forkel_grids_dashboard" template="forkel/grids/dashboard/index.phtml" />
+        </reference>
+    </adminhtml_forkel_grids_dashboard_index>
     <adminhtml_forkel_grids_basic_index>
         <reference name="content">
             <block type="forkel_grids/adminhtml_basic" name="forkel_grids_basic" />
