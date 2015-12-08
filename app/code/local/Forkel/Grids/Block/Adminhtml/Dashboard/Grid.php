@@ -8,7 +8,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
- class Forkel_Checkr_Block_Dashboard_Grid extends Mage_Adminhtml_Block_Widget_Grid
+ class Forkel_Grids_Block_Dashboard_Grid extends Mage_Adminhtml_Block_Widget_Grid
  {
 
     /**
@@ -17,7 +17,7 @@
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('forkel_checkr/dashboard_grid.phtml');
+        $this->setTemplate('forkel_grids/dashboard_grid.phtml');
         $this->setDefaultLimit(5);
     }
  }
