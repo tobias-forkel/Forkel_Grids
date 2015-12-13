@@ -67,7 +67,7 @@ class Forkel_Grids_Block_Adminhtml_Dashboard_Custom_Grid extends Mage_Adminhtml_
                 'header'    => $this->__('Description'),
                 'width'     =>  '150px',
                 'index'     => 'description',
-                'renderer'  => 'Forkel_Grids_Block_Adminhtml_Dashboard_Custom_Renderer_Shortener'
+                'renderer'  => 'Forkel_Grids_Block_Adminhtml_Dashboard_Custom_Renderer_Truncate'
             )
         );
 
@@ -79,3 +79,4 @@ class Forkel_Grids_Block_Adminhtml_Dashboard_Custom_Grid extends Mage_Adminhtml_
         return $this->getUrl('*/forkel_grids_basic/edit/', array('id' => $row->getId()));
     }
 }
+

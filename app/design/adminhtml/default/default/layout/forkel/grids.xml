@@ -2,7 +2,7 @@
 <layout>
     <adminhtml_forkel_grids_dashboard_index>
         <reference name="content">
-            <block type="forkel_grids/adminhtml_dashboard" name="forkel_grids_dashboard" template="forkel/grids/dashboard/index.phtml" />
+            <block type="forkel_grids/adminhtml_dashboard" name="forkel_grids_adminhtml_dashboard" template="forkel/grids/adminhtml/dashboard/index.phtml" />
         </reference>
     </adminhtml_forkel_grids_dashboard_index>
     <adminhtml_forkel_grids_basic_index>
@@ -10,15 +10,35 @@
             <block type="forkel_grids/adminhtml_basic" name="forkel_grids_basic" />
         </reference>
     </adminhtml_forkel_grids_basic_index>
+    <adminhtml_forkel_grids_preview_index>
+        <reference name="content">
+            <block type="forkel_grids/adminhtml_preview" name="forkel_grids_preview" />
+        </reference>
+    </adminhtml_forkel_grids_preview_index>
     <adminhtml_forkel_grids_readonly_index>
         <reference name="content">
             <block type="forkel_grids/adminhtml_readonly" name="forkel_grids_readonly" />
         </reference>
     </adminhtml_forkel_grids_readonly_index>
+    <adminhtml_forkel_grids_popup_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>js_css</type>
+                <name>prototype/windows/themes/default.css</name>
+            </action>
+            <action method="addCss">
+                <name>lib/prototype/windows/themes/magento.css</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="forkel_grids/adminhtml_popup_js" name="forkel_grids_adminhtml_popup_js" template="forkel/grids/adminhtml/popup/js.phtml" />
+            <block type="forkel_grids/adminhtml_popup" name="forkel_grids_popup" />
+        </reference>
+    </adminhtml_forkel_grids_popup_index>
     <adminhtml_forkel_grids_renderer_index>
         <reference name="content">
-            <block type="forkel_grids/help" name="forkel_grids_help" template="forkel/grids/help.phtml" />
-            <block type="forkel_grids/adminhtml_renderer" name="forkel_grids_renderer" />
+            <block type="forkel_grids/adminhtml_help" name="forkel_grids_adminhtml_help" template="forkel/grids/adminhtml/help.phtml" />
+            <block type="forkel_grids/adminhtml_renderer" name="forkel_grids_adminhtml_renderer" />
         </reference>
     </adminhtml_forkel_grids_renderer_index>
 </layout>

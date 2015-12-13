@@ -11,28 +11,6 @@
  -->
 
 <config>
-    <acl>
-        <resources>
-            <admin>
-                <children>
-                    <forkel translate="title" module="forkel_grids">
-                        <children>
-                            <grids>
-                                <title>Grids</title>
-                                <sort_order>10</sort_order>
-                                <children>
-                                    <basic>
-                                        <title>Forkel</title>
-                                        <sort_order>10</sort_order>
-                                    </basic>
-                                </children>
-                            </grids>
-                        </children>
-                    </forkel>
-                </children>
-            </admin>
-        </resources>
-    </acl>
     <menu>
         <forkel translate="title" module="forkel_grids">
             <title>Forkel</title>
@@ -53,12 +31,22 @@
                             <action>adminhtml/forkel_grids_basic/index</action>
                         </basic>
                         <readonly>
-                            <title>Readonly</title>
+                            <title>Basic > Readonly</title>
                             <sort_order>210</sort_order>
                             <action>adminhtml/forkel_grids_readonly/index</action>
                         </readonly>
+                        <!--preview>
+                            <title>Basic > Preview</title>
+                            <sort_order>220</sort_order>
+                            <action>adminhtml/forkel_grids_preview/index</action>
+                        </preview-->
+                        <popup>
+                            <title>Basic > Popup</title>
+                            <sort_order>230</sort_order>
+                            <action>adminhtml/forkel_grids_popup/index</action>
+                        </popup>
                         <renderer>
-                            <title>Renderer + Help Block</title>
+                            <title>Basic > Renderer &amp; Help Block</title>
                             <sort_order>300</sort_order>
                             <action>adminhtml/forkel_grids_renderer/index</action>
                         </renderer>
@@ -67,4 +55,49 @@
             </children>
         </forkel>
     </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <forkel translate="title" module="forkel_grids">
+                        <title>Forkel</title>
+                        <sort_order>300</sort_order>
+                        <children>
+                            <grids>
+                                <title>Grids</title>
+                                <sort_order>10</sort_order>
+                                <children>
+                                    <dashboard>
+                                        <title>Dashboard</title>
+                                        <sort_order>100</sort_order>
+                                    </dashboard>
+                                    <basic>
+                                        <title>Basic</title>
+                                        <sort_order>200</sort_order>
+                                        <action>adminhtml/forkel_grids_basic/index</action>
+                                    </basic>
+                                    <readonly>
+                                        <title>Basic > Readonly</title>
+                                        <sort_order>210</sort_order>
+                                    </readonly>
+                                    <!--preview>
+                                        <title>Basic > Preview</title>
+                                        <sort_order>220</sort_order>
+                                    </preview-->
+                                    <popup>
+                                        <title>Basic > Popup</title>
+                                        <sort_order>230</sort_order>
+                                    </popup>
+                                    <renderer>
+                                        <title>Basic > Renderer &amp; Help Block</title>
+                                        <sort_order>300</sort_order>
+                                    </renderer>
+                                </children>
+                            </grids>
+                        </children>
+                    </forkel>
+                </children>
+            </admin>
+        </resources>
+    </acl>
 </config>

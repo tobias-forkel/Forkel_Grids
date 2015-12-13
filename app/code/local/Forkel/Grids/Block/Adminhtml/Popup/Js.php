@@ -8,10 +8,10 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
-class Forkel_Grids_Model_Resource_Demo_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class Forkel_Grids_Block_Adminhtml_Popup_Js extends Mage_Adminhtml_Block_Abstract
 {
-    protected function _construct()
+    public function getTitle()
     {
-        $this->_init(Forkel_Grids_Helper_Data::MODEL_DEMO);
+        return $this->__('Forkel Grids > Popup');
     }
 }

@@ -150,7 +150,7 @@ class Forkel_Grids_Adminhtml_Forkel_Grids_BasicController extends Mage_Adminhtml
      */
     protected function _isAllowed()
     {
-        return Mage::getSingleton('admin/session')->isAllowed('forkel/grids_basic');
+        return Mage::getSingleton('admin/session')->isAllowed('admin/forkel/grids/basic');
     }
 
     /**

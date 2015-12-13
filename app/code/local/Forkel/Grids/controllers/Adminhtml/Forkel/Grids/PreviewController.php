@@ -8,7 +8,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
-class Forkel_Grids_Adminhtml_Forkel_Grids_RendererController extends Mage_Adminhtml_Controller_Action
+class Forkel_Grids_Adminhtml_Forkel_Grids_PreviewController extends Mage_Adminhtml_Controller_Action
 {
     /**
      * Initialize action
@@ -18,7 +18,7 @@ class Forkel_Grids_Adminhtml_Forkel_Grids_RendererController extends Mage_Adminh
     protected function _initAction()
     {
         $this->loadLayout();
-        $this->_setActiveMenu('forkel/grids_basic');
+        $this->_setActiveMenu('forkel/grids_preview');
 
         return $this;
     }
@@ -30,7 +30,7 @@ class Forkel_Grids_Adminhtml_Forkel_Grids_RendererController extends Mage_Adminh
      */
     public function indexAction()
     {
-        $this->_title($this->__('Forkel Grids'))->_title($this->__('Renderer'));
+        $this->_title($this->__('Forkel Grids'))->_title($this->__('Preview'));
 
         $this->loadLayout();
         $this->renderLayout();
@@ -66,7 +66,41 @@ class Forkel_Grids_Adminhtml_Forkel_Grids_RendererController extends Mage_Adminh
         Mage::register(Forkel_Grids_Helper_Data::MODULE_KEY, $model);
 
         $this->_initAction()
-            ->_addContent($this->getLayout()->createBlock('forkel_grids/adminhtml_renderer_edit')->setData('action', $this->getUrl('*/*/save')))
+            ->_addContent($this->getLayout()->createBlock('forkel_grids/adminhtml_preview_edit')->setData('action', $this->getUrl('*/*/save')))
+            ->renderLayout();
+    }
+
+    /**
+     * Save action
+     *
+     * Save or update model.
+     *
+     * @return void
+     */
+    public function previewAction()
+    {
+        $id  = $this->getRequest()->getParam('id');
+        $model = Mage::getSingleton(Forkel_Grids_Helper_Data::MODEL_DEMO);
+
+        if ($id)
+        {
+            $model->load($id);
+
+            if (!$model->getId())
+            {
+                Mage::getSingleton('adminhtml/session')->addError($this->__('The requested entry no longer exists.'));
+                $this->_redirect('*/*/');
+
+                return;
+            }
+        }
+
+        $this->_title($model->getId() ? $model->getName() : $this->__('New Entry'));
+
+        //Mage::register(Forkel_Grids_Helper_Data::MODULE_KEY, $model);
+
+        $this->_initAction()
+            ->_addContent($this->getLayout()->createBlock('forkel_grids/adminhtml_container')->setData('action', $this->getUrl('*/*/save')))
             ->renderLayout();
     }
 
@@ -150,7 +184,7 @@ class Forkel_Grids_Adminhtml_Forkel_Grids_RendererController extends Mage_Adminh
      */
     protected function _isAllowed()
     {
-        return Mage::getSingleton('admin/session')->isAllowed('admin/forkel/grids/renderer');
+        return Mage::getSingleton('admin/session')->isAllowed('admin/forkel/grids/preview');
     }
 
     /**

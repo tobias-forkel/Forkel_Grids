@@ -8,13 +8,13 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
-class Forkel_Grids_Block_Adminhtml_Basic_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
+class Forkel_Grids_Block_Adminhtml_Preview_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
     public function __construct()
     {
         parent::__construct();
 
-        $this->setId('forkel_grids_basic_form');
+        $this->setId('forkel_grids_preview_form');
     }
 
     /**
