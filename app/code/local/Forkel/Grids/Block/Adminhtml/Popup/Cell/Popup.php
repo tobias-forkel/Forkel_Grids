@@ -1,6 +1,6 @@
 <?php
 /**
- * Forkel Grids
+ * Maintenance Grids
  *
  * @category    Forkel
  * @package     Forkel_Grids
@@ -8,10 +8,11 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
-class Forkel_Grids_Model_Resource_Demo_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class Forkel_Grids_Block_Adminhtml_Popup_Cell_Popup extends Mage_Adminhtml_Block_Widget_Form
 {
     protected function _construct()
     {
-        $this->_init(Forkel_Grids_Helper_Data::MODEL_DEMO);
+        parent::_construct();
+        $this->setTemplate('forkel/grids/adminhtml/popup/cell/popup.phtml');
     }
 }

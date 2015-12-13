@@ -1,0 +1,46 @@
+<?php
+/**
+ * Forkel Grids
+ *
+ * @category    Forkel
+ * @package     Forkel_Grids
+ * @copyright   Copyright (c) 2015 Tobias Forkel (http://www.tobiasforkel.de)
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+?>
+
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td><h3 class="icon-head head-adminhtml-basic"><?php echo $this->getHeaderText() ?></h3></td>
+        </tr>
+    </table>
+</div>
+<div class="dashboard-container">
+    <table cellspacing="25" width="100%">
+        <tr>
+            <td>
+                <h3><?php echo $this->__('CMS') ?></h3>
+                <p><?php echo $this->__('Recently edited pages.') ?></p>
+                <div class="entry-edit">
+                    <div class="entry-edit-head"><h4><?php echo $this->__('Edited Pages') ?></h4></div>
+                    <fieldset class="np"><?php echo $this->getChildHtml('cmsPages'); ?></fieldset>
+                </div>
+            </td>
+            <td>
+                <div class="entry-edit">
+                    <h3><?php echo $this->__('Admin') ?></h3>
+                    <p><?php echo $this->__('Admin panel login activities.') ?></p>
+                    <div class="entry-edit-head"><h4><?php echo $this->__('Last Logins') ?></h4></div>
+                    <fieldset class="np"><?php echo $this->getChildHtml('adminLogins'); ?></fieldset>
+                </div>
+                <div class="entry-edit">
+                    <h3><?php echo $this->__('Custom') ?></h3>
+                    <p><?php echo $this->__('Display a custom collection.') ?></p>
+                    <div class="entry-edit-head"><h4><?php echo $this->__('Custom') ?></h4></div>
+                    <fieldset class="np"><?php echo $this->getChildHtml('custom'); ?></fieldset>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

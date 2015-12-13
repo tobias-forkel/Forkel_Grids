@@ -43,6 +43,6 @@ class Forkel_Grids_Adminhtml_Forkel_Grids_DashboardController extends Mage_Admin
      */
     protected function _isAllowed()
     {
-        return Mage::getSingleton('admin/session')->isAllowed('forkel/grids_dashboard');
+        return Mage::getSingleton('admin/session')->isAllowed('admin/forkel/grids/dashboard');
     }
 }

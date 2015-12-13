@@ -78,3 +78,4 @@ class Forkel_Grids_Block_Adminhtml_Dashboard_Login_Admin_Grid extends Mage_Admin
         return $this->getUrl('*/permissions_user/edit/', array('user_id' => $row->getUserId()));
     }
 }
+

@@ -8,18 +8,16 @@
  * @license     http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
-class Forkel_Grids_Block_Adminhtml_Readonly_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Forkel_Grids_Block_Adminhtml_Preview_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
     public function __construct()
     {
         parent::__construct();
 
         $this->setDefaultSort('id');
-        $this->setId('forkel_grids_readonly_grid');
+        $this->setId('forkel_grids_preview_grid');
         $this->setDefaultDir('desc');
         $this->setSaveParametersInSession(true);
-
-        //$this->_removeButton('add');
     }
 
     /**
@@ -54,7 +52,7 @@ class Forkel_Grids_Block_Adminhtml_Readonly_Grid extends Mage_Adminhtml_Block_Wi
      *
      * Add columns to the grid.
      *
-     * @return Forkel_Grids_Block_Adminhtml_Basic_Grid
+     * @return Forkel_Grids_Block_Adminhtml_Preview_Grid
      */
     protected function _prepareColumns()
     {
@@ -100,6 +98,6 @@ class Forkel_Grids_Block_Adminhtml_Readonly_Grid extends Mage_Adminhtml_Block_Wi
      */
     public function getRowUrl($row)
     {
-        return null;
+        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
     }
 }

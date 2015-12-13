@@ -69,7 +69,7 @@ class Forkel_Grids_Block_Adminhtml_Renderer_Grid extends Mage_Adminhtml_Block_Wi
             array(
                 'header'    => $this->__('Name'),
                 'index'     => 'name',
-                'renderer'  => 'Forkel_Grids_Block_Adminhtml_Renderer_Renderer_Color'
+                'renderer'  => 'Forkel_Grids_Block_Adminhtml_Renderer_Renderer_Name'
             )
         );
 

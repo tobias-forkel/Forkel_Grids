@@ -10,8 +10,9 @@ A collection of different adminhtml grids and tested code you can use for your p
 4. You should find a record " forkel_grids_setup " in table " core_resource ". Use `select * from core_resource where code = 'forkel_grids_setup';`
 
 ## Features
-* A custom dashboard with grids
+* A custom dashboard
 * A basic grid
+* A basic grid with a popup link
 * A basic readonly grid
 * Grid with Renderer and custom help block
 
@@ -29,13 +30,22 @@ If you have any issues with this extension, open an issue on [Github](https://gi
 5. Submit a pull request. :)
 
 ## History
+===== 0.0.5 =====
+* Added a basic grid with a popup link
+
+===== 0.0.4 =====
+* Fixed some wording
+* Fixed wrong class name
+
 ===== 0.0.3 =====
 * Added a custom dashboard with grids as a child block
 
 ===== 0.0.2 =====
+
 * Added a basic read only grid
 
 ===== 0.0.1 =====
+
 * Initial version of this module
 * Added a basic grid
 * Added a basic grid with a simple renderer
